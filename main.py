@@ -50,6 +50,9 @@ while game_is_on:
     # Detect if turtle reached the finish line
     if turtle.ycor() > 280:
         turtle.reset()
+        scoreboard.update_score()
+        for car in cars:
+            car.increase_speed()
 
     # Detect Collision of a car with the Turtle
     for car in cars:
