@@ -1,3 +1,4 @@
+from scoreboard import Scoreboard
 from turtle import Screen
 from player import Player
 import time
@@ -17,6 +18,9 @@ turtle = Player()
 
 # Move Turtle
 screen.onkeypress(key="Up", fun=turtle.move)
+
+# Create Scoreboard
+scoreboard = Scoreboard()
 
 game_is_on = True
 
