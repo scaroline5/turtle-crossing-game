@@ -37,15 +37,24 @@ while game_is_on:
     screen.update()
     counter += 1
 
-    # Keep the cars moving
+    # Create new cars
     if counter == 4:
         new_car = Car()
         cars.append(new_car)
         counter = 0
 
+    # Keep the cars moving
     for car in cars:
         car.move()
 
     # Detect if turtle reached the finish line
     if turtle.ycor() > 280:
         turtle.reset()
+
+    # Detect Collision of a car with the Turtle
+    for car in cars:
+        if turtle.distance(car) < 20:
+            game_is_on = False
+            scoreboard.game_over()
+
+screen.exitonclick()
