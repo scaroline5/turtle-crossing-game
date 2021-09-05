@@ -27,5 +27,5 @@ while game_is_on:
     screen.update()
 
     # Detect if turtle reached the finish line
-    if turtle.ycor()     > 280:
+    if turtle.ycor() > 280:
         turtle.reset()
