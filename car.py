@@ -13,6 +13,14 @@ class Car(Turtle):
         self.shapesize(stretch_wid=1, stretch_len=2)
         self.setheading(180)
         self.goto(280, random.randint(-250, 250))
+        self.move_speed = 0.1
 
     def move(self):
+        self.speed(self.move_speed)
         self.forward(10)
+
+    def increase_speed(self):
+        self.move_speed *= 0.9
+        self.speed(self.move_speed)
+
+
